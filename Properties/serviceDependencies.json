@@ -5,7 +5,8 @@
     },
     "sqlite1": {
       "type": "sqlite",
-      "connectionId": "ConnectionStrings:DatabaseConnection"
+      "connectionId": "ConnectionStrings:DefaultConnection",
+      "dynamicId": null
     }
   }
 }

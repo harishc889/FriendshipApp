@@ -5,7 +5,7 @@
 namespace FriendshipApp.Migrations
 {
     /// <inheritdoc />
-    public partial class sqlitelocal_migration_313 : Migration
+    public partial class sqlitelocal_migration_100 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

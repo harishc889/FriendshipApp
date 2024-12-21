@@ -27,5 +27,15 @@ namespace FriendshipApp.Controllers
         {
             return  await _context.User.FindAsync(id);
         }
+
+        [HttpPost]
+        public async Task<ActionResult<AppUser>> InsertUser([FromBody] AppUser appUser)
+        {
+            if (appUser == null) { return NoContent(); }
+
+            _context.User.Add(appUser);
+            await _context.SaveChangesAsync();
+            return Ok();
+        }
     }
 }

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FriendshipApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241208112055_sqlite.local_migration_313")]
-    partial class sqlitelocal_migration_313
+    [Migration("20241221125623_sqlite.local_migration_100")]
+    partial class sqlitelocal_migration_100
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
