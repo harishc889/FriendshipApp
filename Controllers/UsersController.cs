@@ -5,9 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FriendshipApp.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")] //api/users
-    public class UsersController : ControllerBase
+    public class UsersController : BaseApiController
     {
         private readonly DataContext _context;
         public UsersController(DataContext context)
@@ -28,14 +26,6 @@ namespace FriendshipApp.Controllers
             return  await _context.User.FindAsync(id);
         }
 
-        [HttpPost]
-        public async Task<ActionResult<AppUser>> InsertUser([FromBody] AppUser appUser)
-        {
-            if (appUser == null) { return NoContent(); }
-
-            _context.User.Add(appUser);
-            await _context.SaveChangesAsync();
-            return Ok();
-        }
+        
     }
 }
